@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+@media screen and (min-width: 801px) {
+    .ts-body {
+        margin: 0;
+        display: flex;
+    }
+
+    .ts-menu {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+        width: 20%;
+        max-width: 20%;
+        height: 100vh; 
+        min-width: 270px;
+    }
+
+    .ts-menu-content {
+        list-style: none;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .ts-menu-content2 {
+        list-style: none;
+        height: 51px;
+        position: relative;
+    }
+    
+    .ts-menu-content-text {
+        color: black;
+        text-decoration: none;
+    }
+
+    .ts-menu-title {
+        text-decoration: none;
+        height: 100%;
+        color: black;
+        display: block;
+        text-align: center;
+        font-size: 30px;
+        position: relative;
+        top: 65%;
+        transform: translateY(-50%);
+    }
+    
+    .ts-menu-ul{
+        padding: 0;
+        margin: 0;
+    }
+    
+    .ts-content {
+        background-color: rgb(59, 156, 201);
+        width: 80%;
+        max-width: 80%;
+    }
+
+    hr {
+        width: 100%;
+        color: rgb(61, 61, 61);
+    }
+
+    .ts-menu-content-button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    html{
+        margin: 0;
+    }
+
+    .ts-menu {
+      background-color: rgb(255, 255, 255);
+      height: 50px;
+      width: 100%;
+      padding: 0;
+      position: relative;
+      border-bottom: 1px solid rgb(61, 61, 61);
+      list-style: none;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .ts-menu-content {
+        display: none;
+    }
+
+    .ts-menu-content2 {
+        list-style: none;
+        color: black;
+    }
+
+    .ts-menu-title {
+        display: block;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+    }
+
+    .ts-body {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+
+    .ts-content-accion {
+        width: 100%;
+    }
+
+    .ts-menu-content-button {
+        width: fit-content;
+        background: transparent;
+        border: none;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+    }
+
+    .ts-content {
+        background-color: rgb(59, 156, 201);
+        width: 100%;
+        height: 100vh;
+    }
+}
