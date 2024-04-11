@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: .2 linear;
+}
+
+.ss-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    justify-content: center;
+}
+
+.container-title {
+    text-align: center;
+    text-shadow: 0 5px 10px rgb(0, 0, 0, .2);
+    font-size: 50px;
+}
+
+.ss-container-box {
+    text-align: center;
+    margin: auto;
+    padding: 20px
+}
+
+.ss-container-box img {
+    max-width: 100%;
+    width: 178px;
+    height: 267px;
+    border-radius: 0.2rem;
+    aspect-ratio: 2/3;
+}
+
+/* boton categorias*/
+
+.ss-categories {
+    padding: 8px 32px;
+    border-radius: 3rem;
+    background-color: rgb(15, 69, 247);
+    color: azure;
+    width: auto;
+    cursor: pointer;
+    line-height: 1rem;
+    text-align: center;
+    font-size: 1.125rem;
+    margin-left: 3rem;
+}
+
+.ss-categories-submenu {
+    box-shadow: 0 5px 10px rgb(0,0,0,.2);
+    width: 150px;
+    border-radius: 5px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    position: absolute;
+    z-index: 1;
+    background-color: aliceblue;
+    margin-left: 3rem;
+}
+
+.ss-categories-submenu.show {
+    display: block;
+    opacity: 1;
+}
+
+.ss-list-component {
+    padding: 8px;
+    justify-content: space-around;
+}
+
+.ss-list-component:hover {
+    background-color: rgb(15, 69, 247);
+}
+
+.ss-categories-submenu-list {
+    list-style: none;
+}
+
+.ss-list-component-text {
+    text-decoration: none;
+    color: black;
+}
+
+.ss-list-component-text {
+    font-size: 16px;
+}
