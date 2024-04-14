@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    background: linear-gradient(45deg, blue, red);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+/* ============================================================= */
+/* ========================= Menu ============================== */
+/* ============================================================= */
+
+.tt-container-menu {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+.tt-container-menu h1 {
+    font-size: 5rem;
+}
+
+.tt-container-menu-button {
+    border-radius: 3rem;
+    padding: 5px;
+    border: none;
+    margin: 20px 10px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2rem;
+}
+
+.tt-container-menu-button:hover {
+    /* width: 103%; */
+    background: rgb(107, 204, 144);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+
+/* ============================================================= */
+/* ====================== games board ========================== */
+/* ============================================================= */
+
+
+.tt-container-game-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, blue, red);
+    width: 100%;
+}
+
+.board {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 50px;
+}
+
+.board .dropBox {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    border-right: 4px solid #ffff;
+    border-bottom: 4px solid #ffff;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board .dropBox div {
+    scale: 1.5;
+}
+
+.board .dropBox:nth-child(3),
+.board .dropBox:nth-child(6),
+.board .dropBox:nth-child(9) {
+    border-right: none;
+}
+
+.board .dropBox:nth-child(7),
+.board .dropBox:nth-child(8),
+.board .dropBox:nth-child(9) {
+    border-bottom: none;
+}
+
+.drag {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 420px;
+    width: 100px;
+    gap: 10px;
+    margin: 0 40px;
+    cursor: grab;
+}
+
+.drag .dragBox {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.drag .dragBox-one {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.cross {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cross::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: #fff;
+    transform: rotate(45deg);
+}
+
+.cross::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: #fff;
+    transform: rotate(45deg);
+}
+
+.circle {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+}
+
+.reset {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 25px;
+    border: none;
+    outline: none;
+    background: #161616;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.back {
+    position: relative;
+    height: 30px;
+    top: -250px;
+    border-radius: 50%;
+    border: none;
+    transform: scaleX(-1);
+    cursor: pointer;
+    background: #4d4d4d;
+}
+
+.tt-container-game-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, blue, red);
+    width: 100%;
+}
+
+/* Modal */
+
+.modal {
+    display: none;
+    /* Por defecto, estará oculto */
+    position: fixed;
+    /* Posición fija */
+    z-index: 1;
+    /* Se situará por encima de otros elementos de la página*/
+    padding-top: 200px;
+    /* El contenido estará situado a 200px de la parte superior */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Ancho completo */
+    height: 100%;
+    /* Algura completa */
+    overflow: auto;
+    /* Se activará el scroll si es necesario */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Color negro con opacidad del 50% */
+}
+
+.contenido-modal {
+    position: relative;
+    /* Relativo con respecto al contenedor -modal- */
+    background-color: white;
+    margin: auto;
+    /* Centrada */
+    padding: 20px;
+    width: 60%;
+    -webkit-animation-name: animarsuperior;
+    -webkit-animation-duration: 0.5s;
+    animation-name: animarsuperior;
+    animation-duration: 0.5s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animarsuperior {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.close {
+    color: black;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
